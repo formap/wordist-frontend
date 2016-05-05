@@ -1,0 +1,33 @@
+@mixin width-height($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin background-size($size) {
+  -webkit-background-size: $size;
+  -moz-background-size: $size;
+  -o-background-size: $size;
+  background-size: $size;
+}
+
+html, body, .container {
+  @include width-height(100%, 100%);
+}
+
+.background {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -5;
+  background: url('../images/books.jpg') no-repeat center center fixed;
+  @include width-height(100%, 100%);
+  @include background-size(cover);
+}
+
+.jumbotron {
+  background: rgba(230, 230, 230, 0.8);
+  margin-top: 8%;
+}

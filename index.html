@@ -1,0 +1,23 @@
+<html>
+<head>
+  <title>Wordist Web</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<div class="container">
+  <div ui-view>
+    <img class="background"></img>
+      <div class="jumbotron text-center">
+          <h1>Welcome to wordist!</h1>
+
+          <p>A place where you can keep track of all the words you find on the internet.</p>
+
+          <a ng-click="signUp()" class="btn btn-default"><span class="fa fa-pencil"></span> Sign up</a>
+          <a ng-click="signIn()" class="btn btn-default"><span class="fa fa-key"></span> Sign in</a>
+      </div>
+  </div>
+</div>
+</body>
+</html>
