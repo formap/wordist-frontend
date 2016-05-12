@@ -10,21 +10,24 @@ function Config ($stateProvider, $urlRouterProvider) {
           controller: 'IndexController'
         },
         'sign-div@/': {
-          templateUrl: 'templates/signIn.html'
+          templateUrl: 'templates/signIn.html',
+          controller: 'SignInController'
         }
       }
     })
     .state('/.sign-in', {
       views: {
         'sign-div@/': {
-          templateUrl: 'templates/signIn.html'
+          templateUrl: 'templates/signIn.html',
+          controller: 'SignInController'
         }
       }
     })
     .state('/.sign-up', {
       views: {
         'sign-div@/': {
-          templateUrl: 'templates/signUp.html'
+          templateUrl: 'templates/signUp.html',
+          controller: 'SignUpController'
         }
       }
     });
