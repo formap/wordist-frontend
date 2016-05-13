@@ -9,7 +9,6 @@ function authService ($http, $q) {
       var q = $q.defer();
       $http.post(SERVER_URL, data).then(
         function (newUser) {
-          console.log(newUser);
           q.resolve(newUser);
         }, function (err) {
           q.reject(err);

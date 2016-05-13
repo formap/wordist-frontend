@@ -30,6 +30,19 @@ function Config ($stateProvider, $urlRouterProvider) {
           controller: 'SignUpController'
         }
       }
+    })
+    .state('home', {
+      url: '/home',
+      views: {
+        'complete-page': {
+          templateUrl: 'templates/home.html',
+          controller: 'HomeController'
+        },
+        'home-center@home': {
+          templateUrl: 'templates/words.html',
+          controller: 'WordsController'
+        }
+      }
     });
 
   $urlRouterProvider.otherwise('/');

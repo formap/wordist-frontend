@@ -18,7 +18,8 @@ function SignInController ($scope, $state, $window, authService) {
       function (signedUser) {
         $scope.signInButton = 'Sign-in';
         localStorage.setItem('wordistToken', signedUser.data.token);
-        //$state.go('home');
+        localStorage.setItem('wordistUserId', signedUser.data.user._id);
+        $state.go('home');
       }
     )
   }
