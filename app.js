@@ -43,6 +43,22 @@ function Config ($stateProvider, $urlRouterProvider) {
           controller: 'WordsController'
         }
       }
+    })
+    .state('home.words', {
+      views: {
+        'home-center@home': {
+          templateUrl: 'templates/words.html',
+          controller: 'WordsController'
+        }
+      }
+    })
+    .state('home.settings', {
+      views: {
+        'home-center@home': {
+          templateUrl: 'templates/settings.html',
+          controller: 'SettingsController'
+        }
+      }
     });
 
   $urlRouterProvider.otherwise('/');
