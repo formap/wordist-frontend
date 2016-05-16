@@ -1,6 +1,12 @@
 <div class="profile-content">
+  <div class="search-bar">
+    <div class="input-group">
+      <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-search"></i></span>
+      <input type="text" class="form-control" placeholder="Search" ng-model="searchWords">
+    </div>
+  </div>
   <table class="table">
-    <tr ng-repeat="word in words" id="wordRow">
+    <tr ng-repeat="word in words | filter: searchWords" id="wordRow">
       <td class="userWords">{{word.word}}</td>
       <td class="wordDefinitions">
         {{word.definition}}

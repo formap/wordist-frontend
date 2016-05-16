@@ -6,8 +6,7 @@ function Config ($stateProvider, $urlRouterProvider) {
       url: '/',
       views: {
         'complete-page': {
-          templateUrl: 'index.html',
-          controller: 'IndexController'
+          templateUrl: 'index.html'
         },
         'sign-div@/': {
           templateUrl: 'templates/signIn.html',
