@@ -40,6 +40,10 @@ function Config ($stateProvider, $urlRouterProvider) {
         'home-center@home': {
           templateUrl: 'templates/words.html',
           controller: 'WordsController'
+        },
+        'home-center@home': {
+          templateUrl: 'templates/settings.html',
+          controller: 'SettingsController'
         }
       }
     })
