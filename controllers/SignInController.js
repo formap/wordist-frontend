@@ -22,5 +22,6 @@ function SignInController ($scope, $state, $window, authService) {
         $state.go('home');
       }
     )
+    $scope.signInButton = 'Sign-in';
   }
 }
