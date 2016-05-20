@@ -23,5 +23,9 @@ function usersService ($http, $q) {
       return q.promise;
     }
 
+    changePassword: function(currentPassword, newPassword) {
+      
+    }
+
   }
 }
