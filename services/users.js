@@ -21,10 +21,19 @@ function usersService ($http, $q) {
         }
       );
       return q.promise;
-    }
+    },
 
-    changePassword: function(currentPassword, newPassword) {
-      
+    changePassword: function(data) {
+      var userId = localStorage.getItem('wordistUserId');
+      var q = $q.defer();
+      $http.post(SERVER_URL + '/' + userId, data).then(
+        function () {
+          q.resolve();
+        }, function (err) {
+          q.reject(err);
+        }
+      );
+      return q.promise;
     }
 
   }

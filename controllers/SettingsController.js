@@ -10,11 +10,12 @@ function SettingsController ($scope, $state, usersService) {
     //check if password is correct
     if ($scope.myNewPassword == $scope.myNewPassword2) {
       //enviar nueva contraseña a la api
-      usersService.changePassword($scope.myOldPassword, $scope.myNewPassword).then(
-        function () {
+      var changePassData = {
+        oldPassword: $scope.myNewPassword,
+        password: $scope.myNewPassword2
+      }
 
-        }
-      );
-    } 
+      authService.changePassword(signUpData).then()
+    }
   }
 }
