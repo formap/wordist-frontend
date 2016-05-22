@@ -8,4 +8,9 @@ function HomeController ($scope, $state) {
   $scope.goToSettings = function () {
     $state.go('home.settings');
   }
+
+  $scope.signOut = function () {
+    localStorage.removeItem('wordistToken');
+    $state.go('/');
+  }
 }
