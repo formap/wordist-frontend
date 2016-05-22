@@ -6,7 +6,8 @@ function Config ($stateProvider, $urlRouterProvider) {
       url: '/',
       views: {
         'complete-page': {
-          templateUrl: 'index.html'
+          templateUrl: 'index.html',
+          controller: 'IndexController'
         },
         'sign-div@/': {
           templateUrl: 'templates/signIn.html',
@@ -40,10 +41,6 @@ function Config ($stateProvider, $urlRouterProvider) {
         'home-center@home': {
           templateUrl: 'templates/words.html',
           controller: 'WordsController'
-        },
-        'home-center@home': {
-          templateUrl: 'templates/settings.html',
-          controller: 'SettingsController'
         }
       }
     })
