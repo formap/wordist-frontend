@@ -1,8 +1,11 @@
 angular.module('wordist').controller('WordsController', WordsController);
 
 function WordsController ($scope, $state, usersService) {
+  var token = localStorage.getItem('wordistToken');
 
-  usersService.getWords().then(function (data) {
-    $scope.words = data.data;
-  });
+  if (token) {
+    usersService.getWords().then(function (data) {
+      $scope.words = data.data;
+    });
+  }
 }

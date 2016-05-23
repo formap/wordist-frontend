@@ -17,8 +17,9 @@ function SignInController ($scope, $state, $window, authService) {
     authService.signIn(signInData).then(
       function (signedUser) {
         $scope.signInButton = 'Sign-in';
+        localStorage.setItem('wordistId', signedUser.data.user._id);
+        localStorage.setItem('wordistEmail', signedUser.data.user.email);
         localStorage.setItem('wordistToken', signedUser.data.token);
-        localStorage.setItem('wordistUserId', signedUser.data.user._id);
         $state.go('home');
       }
     )

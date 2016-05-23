@@ -1,8 +1,11 @@
 angular.module('wordist').controller('HomeController', HomeController);
 
 function HomeController ($scope, $state) {
+  var token = localStorage.getItem('wordistToken');
+  if (!token) $state.go('/');
+
   $scope.selected = '';
-  
+
   $scope.goHome = function () {
     $scope.selected = 'home';
     $state.go('home.words');
