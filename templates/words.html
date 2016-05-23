@@ -7,10 +7,8 @@
   </div>
   <table class="table">
     <tr ng-repeat="word in words | filter: searchWords" id="wordRow">
-      <td class="userWords">{{word.word}}</td>
-      <td class="wordDefinitions">
-        {{word.definition}}
-      </td>
+      <td class="userWords" ng-bind-html="word.word" />
+      <td class="wordDefinitions" ng-bind-html="word.definition" />
     </tr>
   </table>
 </div>
