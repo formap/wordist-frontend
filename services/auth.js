@@ -19,7 +19,7 @@ function authService ($http, $q) {
 
     signIn: function(data) {
       var q = $q.defer();
-      $http.post(SERVER_URL + '/login', data).then(
+      $http.post(SERVER_URL + 'login', data).then(
         function (user) {
           q.resolve(user);
         }, function (err) {
