@@ -2,7 +2,7 @@ angular.module('wordist').controller('HomeController', HomeController);
 
 function HomeController ($scope, $state) {
   var token = localStorage.getItem('wordistToken');
-  if (!token) signOut();
+  if (!token) $state.go('/');
 
   $scope.selected = '';
 
