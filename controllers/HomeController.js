@@ -14,7 +14,7 @@ function HomeController ($scope, $state) {
   }
 
   $scope.signOut = function () {
-    $scope.selected = '';
+    $scope.selected = 'signOut';
     localStorage.removeItem('wordistToken');
     $state.go('/');
   }
