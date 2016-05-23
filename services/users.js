@@ -25,8 +25,13 @@ function usersService ($http, $q) {
 
     changePassword: function(data) {
       var userId = localStorage.getItem('wordistUserId');
+      var token = {
+        'headers': {
+          'authorization': 'Bearer ' + localStorage.getItem('wordistToken')
+        }
+      }
       var q = $q.defer();
-      $http.post(SERVER_URL + '/' + userId, data).then(
+      $http.post(SERVER_URL + '/' + userId, data, { headers: token }).then(
         function () {
           q.resolve();
         }, function (err) {

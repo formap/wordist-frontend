@@ -7,17 +7,17 @@
 				</div>
 				<div class="profile-usermenu">
 					<ul class="nav">
-						<li class="active">
+						<li ng-class="{active: isActive('home')}">
 							<a ng-click="goHome()">
 							<i class="glyphicon glyphicon-home"></i>
 							My words </a>
 						</li>
-						<li>
+						<li ng-class="{active: isActive('settings')}">
 							<a ng-click="goToSettings()">
 							<i class="glyphicon glyphicon-user"></i>
 							Profile Settings </a>
 						</li>
-            <li>
+						<li ng-class="{active: isActive('signOut')}">
 							<a ng-click="signOut()">
 							<i class="glyphicon glyphicon-lock"></i>
 						  Sign-out </a>
