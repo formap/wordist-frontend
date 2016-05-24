@@ -4,7 +4,7 @@ function HomeController ($scope, $state) {
   var token = localStorage.getItem('wordistToken');
   if (!token) $state.go('/');
 
-  $scope.selected = '';
+  $scope.selected = 'home';
 
   $scope.goHome = function () {
     $scope.selected = 'home';
