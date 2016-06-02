@@ -5,11 +5,13 @@
       <input type="text" class="form-control" placeholder="Search" ng-model="searchWords">
     </div>
   </div>
-  <table class="table">
-    {{loadingMessage}}
-    <tr ng-repeat="word in words | filter: searchWords" id="wordRow">
-      <td class="userWords" ng-bind-html="word.word" />
-      <td class="wordDefinitions" ng-bind-html="word.definition" />
-    </tr>
-  </table>
+  <div class="words-box">
+    <table class="table">
+      {{loadingMessage}}
+      <tr ng-repeat="word in words | filter: searchWords" id="wordRow">
+        <td class="userWords" ng-bind-html="word.word" />
+        <td class="wordDefinitions" ng-bind-html="word.definition" />
+      </tr>
+    </table>
+  </div>
 </div>

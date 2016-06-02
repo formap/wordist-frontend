@@ -1,6 +1,8 @@
 html, body, .container {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  overflow: hidden;
+}
 
 .background {
   position: fixed;
@@ -16,70 +18,87 @@ html, body, .container {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover; }
+  background-size: cover;
+}
 
 .jumbotron {
   background: rgba(230, 230, 230, 0.8);
-  margin-top: 8%; }
+  margin-top: 8%;
+}
 
 .sign-div {
   width: 50%;
-  margin: auto; }
+  margin: auto;
+}
 
 .profile {
-  margin: 20px 0; }
+  margin: 20px 0;
+}
 
 .profile-sidebar {
+  margin-top: 30px;
   padding: 20px 0 10px 0;
-  background: #fff; }
+  background: #fff;
+}
 
 .profile-userpic img {
   width: 90%;
+  max-width: 350px;
   float: none;
   margin: 0 auto;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
-  border-radius: 50%; }
+  border-radius: 50%;
+}
 
 .profile-usertitle {
   text-align: center;
-  margin-top: 20px; }
+  margin-top: 20px;
+}
 
 .profile-usertitle-name {
   color: #5a7391;
   font-size: 16px;
   font-weight: 600;
-  margin-bottom: 7px; }
+  margin-bottom: 7px;
+}
 
 .profile-usertitle-job {
   text-transform: uppercase;
   color: #5b9bd1;
   font-size: 12px;
   font-weight: 600;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+}
 
 .profile-userbuttons {
   text-align: center;
-  margin-top: 10px; }
+  margin-top: 10px;
+}
 
 .profile-userbuttons .btn {
   text-transform: uppercase;
   font-size: 11px;
   font-weight: 600;
   padding: 6px 15px;
-  margin-right: 5px; }
+  margin-right: 5px;
+}
 
 .profile-userbuttons .btn:last-child {
-  margin-right: 0px; }
+  margin-right: 0px;
+}
 
 .profile-usermenu {
-  margin-top: 30px; }
+  margin-top: 30px;
+}
 
 .profile-usermenu ul li {
-  border-bottom: 1px solid #f0f4f7; }
+  border-bottom: 1px solid #f0f4f7;
+}
 
 .profile-usermenu ul li:last-child {
-  border-bottom: none; }
+  border-bottom: none;
+}
 
 .profile-usermenu ul li a {
   color: #93a3b5;
@@ -88,37 +107,47 @@ html, body, .container {
 
 .profile-usermenu ul li a i {
   margin-right: 8px;
-  font-size: 14px; }
+  font-size: 14px;
+}
 
 .profile-usermenu ul li a:hover {
   background-color: #fafcfd;
-  color: #5b9bd1; }
+  color: #5b9bd1;
+}
 
 .profile-usermenu ul li.active {
-  border-bottom: none; }
+  border-bottom: none;
+}
 
 .profile-usermenu ul li.active a {
   color: #5b9bd1;
   background-color: #f6f9fb;
   border-left: 2px solid #5b9bd1;
-  margin-left: -2px; }
+  margin-left: -2px;
+}
 
 .profile-content {
-  padding: 20px;
+  height: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
   background: #fff;
-  min-height: 460px; }
+  min-height: 400px;
+}
 
 .userWords {
   font-weight: bolder;
-  font-style: italic; }
+  font-style: italic;
+}
 
 .findingWord {
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+}
 
 .findingWord input {
   margin-left: 5px;
   border-radius: 8px;
-  border-style: groove; }
+  border-style: groove;
+}
 
 .search-bar {
   width: 30%;
@@ -127,4 +156,10 @@ html, body, .container {
 
 a:active {
     background-color: yellow;
+}
+
+.words-box {
+  height: 90%;
+  float: left;
+  overflow: scroll;
 }
